@@ -51,22 +51,27 @@ python main.py
 ---
 
 ## Machine Learning Techniques Used
-| Section        | Task                     | ML Concepts                            |
-|----------------|--------------------------|----------------------------------------|
-| EDA            | Visualizing usage        | Time-series plots, feature engineering |
-| PCA            | Dimensionality reduction | Variance analysis                      |
-| Clustering     | Pattern segmentation     | KMeans, behavioral clusters            |
-| Regression     | Power prediction         | Linear Regression, RMSE                |
-| Classification | ON/OFF state             | Random Forest, Precision/Recall        |
-| Anomalies      | Outlier detection        | Isolation Forest                       |
+| Section         | Task                         | ML Concepts                                          |
+|-----------------|------------------------------|------------------------------------------------------|
+| EDA             | Visualizing usage            | Time-series plots, feature engineering               |
+| PCA             | Dimensionality reduction     | Variance analysis                                    |
+| Clustering      | Pattern segmentation         | KMeans, PCA, behavioral grouping                     |
+| Regression      | Power prediction             | Random Forest Regressor, RMSE, R², Cross-validation  |
+| Classification  | ON/OFF appliance state       | Random Forest Classifier, GridSearchCV, F1 Score     |
+| Anomalies       | Outlier detection            | Isolation Forest, rare event spotting                |
+| Forecasting     | Next-day energy consumption  | Prophet model, trend & seasonality modeling          |
+
 
 ---
 
 ## Key Results
-- Regression RMSE ≈ 0.836 kW (baseline)
-- Classification accuracy: 76%
-- PCA: Top 3 PCs explain >50% variance
-- 336 anomalies (~1%) detected
+
+- **Random Forest Regression**: RMSE ≈ 0.76 kW (↓ from baseline 0.836), R² ≈ 0.267  
+- **Classification (Appliance ON/OFF)**: Accuracy = 76%, F1 Score (ON) = 0.48  
+- **PCA**: Top 3 components explain ~55% of variance in daily usage patterns  
+- **Clustering**: 3 distinct daily consumption behavior groups identified  
+- **Anomaly Detection**: 336 anomalies (~1%) flagged as outliers in power usage  
+- **Forecasting (Prophet)**: 24-hour ahead forecast with daily seasonality captured
 
 ---
 
