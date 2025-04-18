@@ -73,11 +73,6 @@ python main.py
 - **Anomaly Detection**: 336 anomalies (~1%) flagged as outliers in power usage  
 - **Forecasting (Prophet)**: 24-hour ahead forecast with daily seasonality captured
 
----
-
-
-## License
-MIT License — free to use and adapt
 
 ---
 ##  Author
